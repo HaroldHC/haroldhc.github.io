@@ -5,11 +5,33 @@
         <link rel="shortcut icon" href="haricon.ico" type="image/x-icon" />
         <link href="diary.css" type="text/css" rel="stylesheet" />
         <link href="diary.js" type="text/javascript" rel="script" />
+        <style>
+        /* 简单排版，让图片适应屏幕 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* 保持图片比例裁剪填充 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* 鼠标悬停放大效果 */
+        }
+    </style>
     </head>
     <body>
         <div align="center">
             <h1>Diary</h1>
-            <img src="diary/1.jpg" alt="Diary" width="1600" />
+            <h2>超简陋版，使用了大部分大肥鱼的代码</h2>
         </div>
+        <div id="diary_book" class="gallery"></div>
+        <script src="diary.js"></script>
     </body>
 </html>
