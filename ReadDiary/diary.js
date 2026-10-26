@@ -19,9 +19,6 @@ for (let i = 1; i <= totalImages; i++) {
     // 设置图片的 alt 属性（方便 SEO 或图片加载失败时显示）
     img.alt = `日记图片 ${i}`;
     
-    // 添加懒加载属性，170张图如果一次性全加载会很卡，加上这个让浏览器滚动到才加载
-    img.loading = "lazy"; 
-
     // 将图片添加到容器中
     a.appendChild(img);
     container.appendChild(a);
