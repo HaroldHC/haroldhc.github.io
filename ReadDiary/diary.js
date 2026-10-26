@@ -8,6 +8,7 @@ for (let i = 1; i <= totalImages; i++) {
     const a = document.createElement('a');
     a.href = `diary/${i}.jpg`; // 大图地址
     a.setAttribute('data-fancybox', 'gallery'); // Fancybox 的识别属性
+    a.target = "_blank"; // 点击后在新标签页打开大图
 
     // 创建 img 元素
     const img = document.createElement('img');
